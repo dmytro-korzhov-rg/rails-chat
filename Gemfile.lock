@@ -66,6 +66,19 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    anycable (1.4.1)
+      anycable-core (= 1.4.1)
+      google-protobuf (~> 3.23)
+      grpc (~> 1.53)
+    anycable-core (1.4.1)
+      anyway_config (~> 2.2)
+      google-protobuf (>= 3.13)
+    anycable-rails (1.4.0)
+      actioncable (>= 6.0)
+      anycable (~> 1.4)
+      globalid
+    anyway_config (2.5.1)
+      ruby-next-core (>= 0.14.0)
     ast (2.4.2)
     bindex (0.8.1)
     bootsnap (1.16.0)
@@ -79,6 +92,12 @@ GEM
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    google-protobuf (3.23.4-x86_64-linux)
+    googleapis-common-protos-types (1.7.0)
+      google-protobuf (~> 3.14)
+    grpc (1.56.2-x86_64-linux)
+      google-protobuf (~> 3.23)
+      googleapis-common-protos-types (~> 1.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.2.1)
@@ -178,6 +197,7 @@ GEM
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
+    ruby-next-core (0.15.3)
     ruby-progressbar (1.13.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -222,6 +242,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  anycable-rails
   bootsnap
   importmap-rails
   jbuilder
@@ -239,7 +260,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.4.10
